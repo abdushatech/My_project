@@ -1,0 +1,25 @@
+
+body {
+color: whitesmoke;
+padding: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-
+serif;
+}
+h1 {
+background-color: #ffffff;
+background-color: hsla(0, 100%, 100%, 0.5);
+color: #64645a;
+padding: inherit;
+}
+p {
+padding: 5px;
+margin: 0px;
+}
+#scale {
+background: rgb(0, 55, 255);
+background: linear-gradient(
+180deg,
+rgba(0, 0, 255, 1) 0%,
+rgba(255, 0, 0, 1) 100%
+);
+}
