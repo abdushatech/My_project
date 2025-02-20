@@ -1,0 +1,17 @@
+.centered{
+    text-align: center;
+}
+.hidden {
+    display: none;
+    }
+    .show {
+    display: block;
+    }
+ button :hover{
+    background-color: aqua;
+ }
+ label{
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+    margin: 0; /* 3 */
+  }
