@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Grid Area Example</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+    <link rel="stylesheet" href="tailwindbase.css"> 
+</head>
+<body class="bg-black text-white text-2xl text-center grid h-screen 
+    [grid-template-columns:150px_auto_150px] 
+    [grid-template-rows:60px_180px_40px] 
+    [grid-template-areas:'head_head_head''nav_article_aside''foot_foot_foot']">
+
+    <header class="[grid-area:head] bg-[cornflowerblue] flex items-center justify-center">
+      Header
+    </header>
+
+    <nav class="[grid-area:nav] bg-[khaki] flex items-center justify-center">
+      Nav
+    </nav>
+
+    <article class="[grid-area:article] bg-[darkseagreen] flex items-center justify-center">
+      Article
+    </article>
+
+    <aside class="[grid-area:aside] bg-[goldenrod] flex items-center justify-center">
+      Aside
+    </aside>
+
+    <footer class="[grid-area:foot] bg-[lemonchiffon] text-black flex items-center justify-center">
+      Footer
+    </footer>
+
+  </body>
+</html>

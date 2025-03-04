@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Area Example</title>
+    <style>
+      body {
+        background: black;
+        font-size: 2em;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 150px auto 150px;
+        grid-template-rows: 60px 180px 40px;
+        grid-template-areas: "head head head" "nav article aside" "foot foot foot";
+      }
+      header {
+        background: cornflowerblue;
+        grid-area: head;
+      }
+      nav {
+        background: khaki;
+        grid-area: nav;
+      }
+      article {
+        background: darkseagreen;
+        grid-area: article;
+      }
+      aside {
+        background: goldenrod;
+        grid-area: aside;
+      }
+      footer {
+        background: lemonchiffon;
+        grid-area: foot;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </body>
+</html>
