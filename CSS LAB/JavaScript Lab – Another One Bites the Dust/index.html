@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another One Bites the Dust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-900 text-yellow-400 flex flex-col items-center justify-center min-h-screen">
+    
+    <div class="text-center p-6">
+        <h1 class="text-4xl font-bold">QUEEN / WYCLEF JEAN</h1>
+        <h2 class="text-2xl font-semibold">FEATURING PRAS & FREE</h2>
+        <img src="cover-art.jpg" alt="Album Cover" class="w-64 mt-4">
+        <h3 class="text-3xl font-bold mt-2">ANOTHER ONE BITES THE DUST</h3>
+    </div>
+    
+    <audio id="song" controls class="my-4">
+        <source src="another-one-bites-the-dust.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div id="lyrics" class="text-white text-lg text-center mt-4"></div>
+    
+    <script>
+        const lyrics = [
+            { time: 0, text: "Are you ready, hey, are you ready for this?" },
+            { time: 5.1, text: "Are you hanging on the edge of your seat?" },
+            { time: 10.3, text: "I need a break beat, uh" },
+            { time: 15.0, text: "Outta the doorway, the bullets rip" },
+            { time: 18.5, text: "Repeating to the sound of the beat, hey" },
+            { time: 24.0, text: "Another one bites the dust" },
+            { time: 30.0, text: "And another one gone, and another one gone" },
+            { time: 35.5, text: "Another one bites the dust" },
+            { time: 40.2, text: "Wyclef, Dirty Cash, Young Free" },
+        ];
+
+        let lyricsDiv = document.getElementById("lyrics");
+        let song = document.getElementById("song");
+
+        function updateLyrics() {
+            let currentTime = song.currentTime;
+            let currentLyric = lyrics.find(lyric => currentTime >= lyric.time);
+            if (currentLyric) {
+                lyricsDiv.innerHTML = `<p class='text-2xl font-bold animate-pulse'>${currentLyric.text}</p>`;
+            }
+        }
+        
+        song.addEventListener("timeupdate", updateLyrics);
+    </script>
+</body>
+</html>

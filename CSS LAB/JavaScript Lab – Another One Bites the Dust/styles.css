@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#lyric-freddie {
+    color: #60a5fa; /* Blue */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#lyric-others {
+    color: #34d399; /* Green */
+    font-size: 24px;
+    font-weight: bold;
+}
