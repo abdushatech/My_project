@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“Nine Bodies in a Mexican Morgue</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gradient-to-b from-[#ffff7a] to-green-800 via-[#ee8544] m-5 p-5"
+  >
+    <header class="text-[72px] text-white mx-auto text-center">
+      10 Passports but 9 Bodies
+    </header>
+    <header class="text-[36px] text-white mx-auto text-center mb-5">
+      The 10 People on the Plane are:
+    </header>
+    <div class="grid grid-cols-2 md:grid-cols-5 mx-auto">
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="1.png"
+          alt="flight Attendant"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Flight Attendant</span>
+      </div>
+
+
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="2.png"
+          alt="Pilot - Captain Primero Gabriel Vega"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span> Captain Primero Gabriel Vega </span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="3.png"
+          alt="Kevin – Doctor"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Kevin – Doctor</span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="4.png"
+          alt="Zack - Insurance Salesman "
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Zack - Insurance Salesman</span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="5.png"
+          alt="Amy - Child of Tech King on Honeymoon"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Amy - Child of Tech King on Honeymoon </span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="6.png"
+          alt="Carlos – Mexican Wrestler - Rapido"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Carlos – Mexican Wrestler - Rapido </span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="7.png"
+          alt="Dan – Limo Driver – Married to Amy"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Dan – Limo Driver – Married to Amy</span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="8.png"
+          alt="Travis - MAGA Husband"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Travis - MAGA Husband </span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="9.png"
+          alt="Lisa - MAGA Wife"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span>Lisa - MAGA Wife </span>
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="10.png"
+          alt="Sonja -Photographer"
+          class="w-[300px] h-[300px]"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        ><span> Sonja -Photographer </span>
+      </div>
+    </div>
+
+    <!-- Reset Button -->
+    <button
+      class="mt-5 px-6 py-2 bg-red-500 text-white text-xl font-semibold hover:bg-red-700 transition-all mx-auto block"
+      onclick="resetAllX()"
+    >
+      Reset
+    </button>
+
+    <script>
+      // Function to show the X on the image when clicked
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", function () {
+          const closeX = this.nextElementSibling; // The <span> with the "X"
+          closeX.classList.remove("hidden"); // Show the X by removing 'hidden' class
+        });
+      });
+      // Function to remove a specific X when clicked
+      function removeX(span) {
+        span.classList.add("hidden"); // Hide the X by adding 'hidden' class
+      }
+      // Function to reset (remove) all X's
+      function resetAllX() {
+        document.querySelectorAll("span").forEach((span) => {
+          if (span.classList.contains("text-red-500")) {
+            // Ensure we're only resetting X spans
+            span.classList.add("hidden"); // Hide all the X's by adding 'hidden' class
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

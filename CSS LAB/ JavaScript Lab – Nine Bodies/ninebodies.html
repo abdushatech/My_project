@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“Nine Bodies in a Mexican Morgue</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gradient-to-b from-[#ffff7a] to-green-800 via-[#ee8544] m-5 p-5"
+  >
+    <header class="text-[72px] text-white mx-auto text-center">
+      10 Passports but 9 Bodies
+    </header>
+    <header class="text-[36px] text-white mx-auto text-center mb-5">
+      The 10 People on the Plane are:
+    </header>
+
+<div class="grid grid-cols-2 mx-auto">
+      <div class="p-5 text-center mx-auto text-white relative" data-index="1">
+        <img src="1.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        1 - Flight Attendant
+      </div>
+
+
+      
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="2">
+        <img src="2.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Pilot - Captain Primero Gabriel Vega
+      </div>
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="3">
+        <img src="3.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Kevin – Doctor
+      </div>
+
+
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="4">
+        <img src="4.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Zack - Insurance Salesman
+      </div>
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="5">
+        <img src="5.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Amy - Child of Tech King on Honeymoon
+      </div>
+
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="6">
+        <img src="6.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Carlos – Mexican Wrestler - Rapido
+      </div>
+
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="7">
+        <img src="7.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Dan – Limo Driver – Married to Amy
+      </div>
+
+
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="8">
+        <img src="8.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Travis - MAGA Husband
+      </div>
+
+
+
+      <div class="p-5 text-center mx-auto text-white relative" data-index="9">
+        <img src="9.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+        Lisa - MAGA Wife
+      </div>
+
+      
+    
+      <div class="p-5 text-center mx-auto text-white relative" data-index="10">
+        <img src="10.png" class="w-[300px] h-[300px]" />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden pointer-events-auto"
+          onclick="removeX(this)"
+          >X</span
+        >
+         Sonja -Photographer
+      </div>
+
+    </div>
+
+    <!-- Reset Button -->
+    <button
+      class="mt-5 px-6 py-2 bg-red-500 text-white text-xl font-semibold hover:bg-red-700 transition-all mx-auto block"
+      onclick="resetAllX()"
+    >
+      Reset
+    </button>
+
+    <script>
+// Function to show the X on the image when clicked and save state
+document.querySelectorAll("img").forEach((img) => {
+img.addEventListener("click", function () {
+const closeX = this.nextElementSibling; // The <span> with the "X"
+closeX.classList.remove("hidden"); // Show the X by removing 'hidden' class
+const index = this.parentElement.getAttribute("data-index");
+localStorage.setItem(`marked-${index}`
+, true); // Save state
+});
+});
+// Function to remove a specific X when clicked and update state
+function removeX(span) {
+span.classList.add("hidden"); // Hide the X by adding 'hidden' class
+const index = span.parentElement.getAttribute("data-index");
+localStorage.removeItem(`marked-${index}`); // Update state
+}
+// Function to reset (remove) all X's and clear state
+function resetAllX() {
+document.querySelectorAll("span").forEach((span) => {
+if (span.classList.contains("text-red-500")) {
+// Ensure we're only resetting X spans
+span.classList.add("hidden"); // Hide all the X's by adding 'hidden' class
+}
+})};
+for (let i = 1; i <= 10; i++) {
+  localStorage.removeItem(`marked-${i}`);
+} 
+
+// Load saved state from localStorage on page load
+document.addEventListener("DOMContentLoaded", () => {
+for (let i = 1; i <= 10; i++) {
+if (localStorage.getItem(`marked-${i}`) === "true") {
+const span = document.querySelector(`[data-index="${i}"] > span`);
+if (span) {
+span.classList.remove("hidden");
+}
+}
+}
+});
+
+
+</script>
+  </body>
+</html>
